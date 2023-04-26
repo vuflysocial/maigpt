@@ -13,7 +13,7 @@ const Chatgpt = (props) => {
           {props.description}
         </p>
       </div>
-      <Completion />
+
     </React.Fragment>
   );
 };
