@@ -2,10 +2,11 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import Head from "next/head";
 import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
 import { domainName } from "../const/yourDetails";
-import "../styles/globals.css";
+import "../styles/Thirdweb.module.css";
+
 
 // This is the chain your dApp will work on.
-const activeChain = "mumbai";
+const activeChain = "binance-testnet";
 
 function MyApp({ Component, pageProps }) {
   return (

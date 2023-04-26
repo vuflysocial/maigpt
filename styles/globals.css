@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.bg-chatLog {
+  background-color: gray;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
