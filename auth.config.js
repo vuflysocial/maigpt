@@ -4,6 +4,6 @@ import { domainName } from "./const/yourDetails";
 
 export const { ThirdwebAuthHandler, getUser } = ThirdwebAuth({
   domain: domainName,
-  wallet: new PrivateKeyWallet("0x61c8038567cb2eb67d24d8a19529ceefbf94e0d682c9e7966af261d7e4075ccc"),
+  wallet: new PrivateKeyWallet("0xfccc89195028e4c9bbe11ccabe0f06fa40775a66a2d91c4b17320ec79df5b793"),
 
 });
