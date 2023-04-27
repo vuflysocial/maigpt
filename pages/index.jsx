@@ -32,7 +32,7 @@ export default function Home() {
         Logout
       </button>
       <div>
-      <iframe src="https://meloai.netlify.app/" width="500" height="500"></iframe>
+      <iframe src="https://gotem.netlify.app/" width="500" height="500"></iframe>
 
 
       </div>
