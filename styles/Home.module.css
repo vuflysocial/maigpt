@@ -391,3 +391,24 @@
     transform: rotate(0deg);
   }
 }
+
+.maigptButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #F213A4;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.maigptButton:hover {
+  background-color: #D80E95;
+  cursor: pointer;
+}
+
+
+
+
+
+
