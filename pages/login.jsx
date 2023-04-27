@@ -33,7 +33,7 @@ export default function Login() {
     </button>
   </Link>{" "}
   unless you own an MJDCC NFT from our collection!
-  if you don't have one, you can't mint below
+        if you don&apos;t have one, you can&apos;t mint below
 </p>
 
 
