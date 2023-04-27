@@ -7,9 +7,7 @@
   box-sizing: border-box;
 }
 
-.bg-chatLog {
-  background-color: gray;
-}
+
 
 /* Set core body defaults */
 body {
@@ -29,7 +27,7 @@ select {
 
 :root {
   --background-color: #1c1e21;
-  --white: #ffffff;
+  --white: #000;
   --tw-color1: #a855f7;
   --tw-color1-hover: #9333ea;
 }

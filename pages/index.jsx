@@ -5,9 +5,69 @@ import { getUser } from "../auth.config";
 import checkBalance from "../util/checkBalance";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
+import Tv from "./tv";
+import styled from "styled-components"
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+`;
 
+const MenuButton = styled.button`
+  background-color: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
 
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const IFrameWrapper = styled.div`
+  background-color: #fff;
+  display: ${props => props.isOpen ? 'block' : 'none'};
+  flex: 1;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
+const IFrame = styled.iframe`
+  border: none;
+  height: 100%;
+  width: 100%;
+`;
+
+const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: ${props => props.isOpen ? 'block' : 'none'};
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const iframeStyles = `
+  #gotem-iframe {
+    overflow: hidden;
+  }
+`;
 
 export default function Home() {
   const { logout } = useLogout();
@@ -22,7 +82,7 @@ export default function Home() {
   }, [isLoading, isLoggedIn, router]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       <h1 className={styles.h1}>Restricted Access Page</h1>
       <p className={styles.explain}>
         Thanks for being a member of our NFT community!
@@ -31,15 +91,21 @@ export default function Home() {
       <button className={styles.mainButton} onClick={logout}>
         Logout
       </button>
-      <div>
-      <iframe src="https://gotem.netlify.app/" width="500" height="500"></iframe>
-
+      <br />
+      <br />
+      <br />
+      <div style={{ flex: 1 }}>
+        <iframe src="https://gotem.netlify.app/" width="500" height="500" style={{ border: "none" }}></iframe>
+      </div>
+      <div style={{ flex: 1 }}>
 
       </div>
+      <Tv />
     </div>
 
   );
 }
+
 
 // This gets called on every request
 export async function getServerSideProps(context) {
@@ -85,3 +151,4 @@ export async function getServerSideProps(context) {
     props: {},
   };
 }
+

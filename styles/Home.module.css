@@ -1,3 +1,5 @@
+
+
 .container {
   margin-top: 96px;
   display: flex;
@@ -53,7 +55,7 @@
   min-width: 3rem;
   font-size: 1rem;
   background: #e5e5ea;
-  background-image: linear-gradient(to left, #cc25b3 0%, #418dff 101.52%);
+  background-image: linear-gradient(to left, #38cc25 0%, #c7d13a 101.52%);
   color: #fff;
   width: 180px;
   text-align: center;
@@ -274,6 +276,11 @@
   }
 }
 
+div.iframe-container > iframe {
+  overflow: hidden;
+}
+
+
 @media (prefers-reduced-motion) {
   .thirteen::before {
     animation: none;
@@ -379,9 +386,7 @@
   }
 }
 
-.bg-chatLog {
-  background-color: gray;
-}
+
 
 @keyframes rotate {
   from {
@@ -420,6 +425,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: #000;
 }
 
 
